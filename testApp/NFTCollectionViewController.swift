@@ -13,15 +13,19 @@ import MapleBacon
 class NFTCollectionViewController: UIViewController {
     
     private let viewModel:NFTCollectionViewModel
+    private let ethViewModel: EthViewModel
     private let disposeBag = DisposeBag()
     private var viewWidth: CGFloat {
         get {
             return self.view.frame.width
         }
     }
+    
+    private let balanceView = BalanceView(frame: .zero)
     private let refreshControl: UIRefreshControl = {
         return UIRefreshControl()
     }()
+
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -37,7 +41,7 @@ class NFTCollectionViewController: UIViewController {
     
     init(viewModel: NFTCollectionViewModel) {
         self.viewModel = viewModel
-        
+        self.ethViewModel = EthViewModel(apiService: EtheremRPCManager())
         super.init(nibName: nil, bundle: nil)
     }
    
@@ -51,18 +55,24 @@ class NFTCollectionViewController: UIViewController {
         self.navigationItem.title = "NFT Collection"
         initUI()
         initEvent()
-        
+                
     }
     
     fileprivate func initUI() {
         
         view.backgroundColor = .white
+        view.addSubview(balanceView)
+        balanceView.attach(toSafeArea: view, top: 25)
+        balanceView.attach(to: view, left: 0, right: 0)
+        balanceView.equalHeight(75)
         view.addSubview(collectionView)
+        collectionView.stickTo(view: balanceView, at: .bottom, constant: 0)
         collectionView.attach(to: view, left: 0, right: 0)
-        collectionView.attach(toSafeArea: view, top: 0, bottom: 0)
+        collectionView.attach(toSafeArea: view, bottom: 0)
         collectionView.refreshControl = refreshControl
+        
     }
-    
+
         
     
     private func initEvent() {
@@ -89,6 +99,8 @@ class NFTCollectionViewController: UIViewController {
         refreshControl.rx.controlEvent(.valueChanged).bind(to: viewModel.triggerAPI).disposed(by: disposeBag)
 
         viewModel.isLoading.bind(to: refreshControl.rx.isRefreshing).disposed(by: disposeBag)
+        
+        ethViewModel.ethBalance.bind(to: balanceView.contentLabel.rx.text).disposed(by: disposeBag)
     }
 }
 
@@ -106,20 +118,3 @@ extension NFTCollectionViewController: UICollectionViewDelegate {
 }
 
 
-fileprivate struct Section {
-    var header: String
-    var items: [Item]
-}
- 
-extension Section {
-    typealias Item = (img: String, name: String)
-     
-    var identity: String {
-        return header
-    }
-     
-    init(original: Section, items: [Item]) {
-        self = original
-        self.items = items
-    }
-}

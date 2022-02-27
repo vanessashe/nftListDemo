@@ -10,6 +10,14 @@
 		FD61434527C69C4F008513B6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61434427C69C4F008513B6 /* AppCoordinator.swift */; };
 		FD61434727C69C8E008513B6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61434627C69C8E008513B6 /* Coordinator.swift */; };
 		FD61434A27C69CEE008513B6 /* NFTListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD61434927C69CEE008513B6 /* NFTListCoordinator.swift */; };
+		FD82F16E27CA9E9400E2A4FC /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82F16D27CA9E9400E2A4FC /* BalanceView.swift */; };
+		FD82F17027CA9ED400E2A4FC /* EthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82F16F27CA9ED400E2A4FC /* EthViewModel.swift */; };
+		FD82F17327CA9F0900E2A4FC /* NFTDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82F17227CA9F0900E2A4FC /* NFTDetailViewModel.swift */; };
+		FD82F17627CA9F6300E2A4FC /* Web3 in Frameworks */ = {isa = PBXBuildFile; productRef = FD82F17527CA9F6300E2A4FC /* Web3 */; };
+		FD82F17827CA9F6300E2A4FC /* Web3ContractABI in Frameworks */ = {isa = PBXBuildFile; productRef = FD82F17727CA9F6300E2A4FC /* Web3ContractABI */; };
+		FD82F17A27CA9F6400E2A4FC /* Web3PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = FD82F17927CA9F6400E2A4FC /* Web3PromiseKit */; };
+		FD82F17C27CA9F9B00E2A4FC /* EtheremRPCAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82F17B27CA9F9B00E2A4FC /* EtheremRPCAPIManager.swift */; };
+		FD82F17E27CB599E00E2A4FC /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD82F17D27CB599E00E2A4FC /* UserConfig.swift */; };
 		FD83DDF127C53A1E005C33F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DDF027C53A1E005C33F6 /* AppDelegate.swift */; };
 		FD83DDF327C53A1E005C33F6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD83DDF227C53A1E005C33F6 /* SceneDelegate.swift */; };
 		FD83DDF827C53A1E005C33F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD83DDF627C53A1E005C33F6 /* Main.storyboard */; };
@@ -40,6 +48,11 @@
 		FD61434427C69C4F008513B6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FD61434627C69C8E008513B6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FD61434927C69CEE008513B6 /* NFTListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTListCoordinator.swift; sourceTree = "<group>"; };
+		FD82F16D27CA9E9400E2A4FC /* BalanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		FD82F16F27CA9ED400E2A4FC /* EthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthViewModel.swift; sourceTree = "<group>"; };
+		FD82F17227CA9F0900E2A4FC /* NFTDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFTDetailViewModel.swift; sourceTree = "<group>"; };
+		FD82F17B27CA9F9B00E2A4FC /* EtheremRPCAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtheremRPCAPIManager.swift; sourceTree = "<group>"; };
+		FD82F17D27CB599E00E2A4FC /* UserConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfig.swift; sourceTree = "<group>"; };
 		FD83DDED27C53A1E005C33F6 /* testApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD83DDF027C53A1E005C33F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD83DDF227C53A1E005C33F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,9 +82,12 @@
 				FD83DE1327C53CCB005C33F6 /* RxSwiftExt in Frameworks */,
 				FD83DE0A27C53B56005C33F6 /* RxSwift in Frameworks */,
 				FD83DE0D27C53C10005C33F6 /* RxAlamofire in Frameworks */,
+				FD82F17827CA9F6300E2A4FC /* Web3ContractABI in Frameworks */,
 				FD83DE1027C53C97005C33F6 /* RxSwiftUtilities in Frameworks */,
 				FD83DE0827C53B56005C33F6 /* RxRelay in Frameworks */,
+				FD82F17627CA9F6300E2A4FC /* Web3 in Frameworks */,
 				FD83DE0627C53B56005C33F6 /* RxCocoa in Frameworks */,
+				FD82F17A27CA9F6400E2A4FC /* Web3PromiseKit in Frameworks */,
 				FD83DE3A27C685C1005C33F6 /* MapleBacon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +110,14 @@
 				FD61434927C69CEE008513B6 /* NFTListCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FD82F17127CA9F0900E2A4FC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD82F17227CA9F0900E2A4FC /* NFTDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FD83DDE427C53A1E005C33F6 = {
@@ -146,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				FD83DE1627C53D5F005C33F6 /* NFTCollectionViewModel.swift */,
+				FD82F16F27CA9ED400E2A4FC /* EthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -162,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				FD83DE1B27C53D5F005C33F6 /* NFTCollectionCell.swift */,
+				FD82F16D27CA9E9400E2A4FC /* BalanceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,7 +195,9 @@
 		FD83DE1C27C53D5F005C33F6 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				FD82F17B27CA9F9B00E2A4FC /* EtheremRPCAPIManager.swift */,
 				FD83DE1D27C53D5F005C33F6 /* NFTListAPIManager.swift */,
+				FD82F17D27CB599E00E2A4FC /* UserConfig.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -207,6 +235,7 @@
 		FD83DE4027C691D4005C33F6 /* NFTDetail */ = {
 			isa = PBXGroup;
 			children = (
+				FD82F17127CA9F0900E2A4FC /* ViewModel */,
 				FD83DE4327C69254005C33F6 /* NFTDetailViewController.swift */,
 			);
 			path = NFTDetail;
@@ -236,6 +265,9 @@
 				FD83DE0F27C53C97005C33F6 /* RxSwiftUtilities */,
 				FD83DE1227C53CCB005C33F6 /* RxSwiftExt */,
 				FD83DE3927C685C1005C33F6 /* MapleBacon */,
+				FD82F17527CA9F6300E2A4FC /* Web3 */,
+				FD82F17727CA9F6300E2A4FC /* Web3ContractABI */,
+				FD82F17927CA9F6400E2A4FC /* Web3PromiseKit */,
 			);
 			productName = testApp;
 			productReference = FD83DDED27C53A1E005C33F6 /* testApp.app */;
@@ -271,6 +303,7 @@
 				FD83DE0E27C53C97005C33F6 /* XCRemoteSwiftPackageReference "RxSwiftUtilities" */,
 				FD83DE1127C53CCB005C33F6 /* XCRemoteSwiftPackageReference "RxSwiftExt" */,
 				FD83DE3827C685C1005C33F6 /* XCRemoteSwiftPackageReference "MapleBacon" */,
+				FD82F17427CA9F6300E2A4FC /* XCRemoteSwiftPackageReference "Web3" */,
 			);
 			productRefGroup = FD83DDEE27C53A1E005C33F6 /* Products */;
 			projectDirPath = "";
@@ -301,6 +334,7 @@
 			files = (
 				FD83DE2C27C53E22005C33F6 /* NFTCollectionCell.swift in Sources */,
 				FD61434527C69C4F008513B6 /* AppCoordinator.swift in Sources */,
+				FD82F17E27CB599E00E2A4FC /* UserConfig.swift in Sources */,
 				FD61434A27C69CEE008513B6 /* NFTListCoordinator.swift in Sources */,
 				FD83DE4427C69254005C33F6 /* NFTDetailViewController.swift in Sources */,
 				FD83DE2A27C53E1A005C33F6 /* NFTCollectionViewModel.swift in Sources */,
@@ -309,11 +343,15 @@
 				FD61434727C69C8E008513B6 /* Coordinator.swift in Sources */,
 				FD83DE2927C53E12005C33F6 /* NFTCollectionViewController.swift in Sources */,
 				FD83DE2E27C53E2B005C33F6 /* UITableView+Utils.swift in Sources */,
+				FD82F17327CA9F0900E2A4FC /* NFTDetailViewModel.swift in Sources */,
 				FD83DE3027C53E2B005C33F6 /* UIView+Layout.swift in Sources */,
+				FD82F17027CA9ED400E2A4FC /* EthViewModel.swift in Sources */,
 				FD83DE2F27C53E2B005C33F6 /* UICollectionView+Utils.swift in Sources */,
 				FD83DE2B27C53E1D005C33F6 /* NFTItem.swift in Sources */,
 				FD83DE3F27C68EE1005C33F6 /* Int+Color.swift in Sources */,
+				FD82F17C27CA9F9B00E2A4FC /* EtheremRPCAPIManager.swift in Sources */,
 				FD83DDF127C53A1E005C33F6 /* AppDelegate.swift in Sources */,
+				FD82F16E27CA9E9400E2A4FC /* BalanceView.swift in Sources */,
 				FD83DE3127C53E2B005C33F6 /* UIView+Appearance.swift in Sources */,
 				FD83DDF327C53A1E005C33F6 /* SceneDelegate.swift in Sources */,
 			);
@@ -463,7 +501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = N8T775R7WH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testApp/Info.plist;
@@ -491,7 +529,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = N8T775R7WH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testApp/Info.plist;
@@ -537,6 +575,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FD82F17427CA9F6300E2A4FC /* XCRemoteSwiftPackageReference "Web3" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Boilertalk/Web3.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		FD83DE0427C53B56005C33F6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -580,6 +626,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FD82F17527CA9F6300E2A4FC /* Web3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD82F17427CA9F6300E2A4FC /* XCRemoteSwiftPackageReference "Web3" */;
+			productName = Web3;
+		};
+		FD82F17727CA9F6300E2A4FC /* Web3ContractABI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD82F17427CA9F6300E2A4FC /* XCRemoteSwiftPackageReference "Web3" */;
+			productName = Web3ContractABI;
+		};
+		FD82F17927CA9F6400E2A4FC /* Web3PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD82F17427CA9F6300E2A4FC /* XCRemoteSwiftPackageReference "Web3" */;
+			productName = Web3PromiseKit;
+		};
 		FD83DE0527C53B56005C33F6 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD83DE0427C53B56005C33F6 /* XCRemoteSwiftPackageReference "RxSwift" */;

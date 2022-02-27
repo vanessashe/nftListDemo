@@ -22,7 +22,7 @@ class NFTListAPIManager:ApiManager, NFTLoadingAPIProtocol {
             
             let limit:Int = 50
             let param:Parameters = [
-                "owner" : "0x960DE9907A2e2f5363646d48D7FB675Cd2892e91",
+                "owner" : UserConfig.walletAddr,
                 "format": "json",
                 "cursor": (page - 1) * limit,
                 "offset": (page - 1) * limit,
